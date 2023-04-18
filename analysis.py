@@ -6,4 +6,7 @@ import numpy as np
 
 iris = pd.read_csv("Iris.csv")
 
+print(iris.info)
+print (iris.describe)
+
 
