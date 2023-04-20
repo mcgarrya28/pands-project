@@ -16,11 +16,12 @@ stat_summary = iris.describe()
 with open('Iris Data Summary.txt', 'w') as f:
     f.write(str(stat_summary))
 
-hist_params = {'bins': 20, 'edgecolor': 'black', 'alpha': 0.7}
+hist_params = {'bins': 15, 'edgecolor': 'black', 'alpha': 0.5}
 
 # Generate a histogram of each variable and save it to a PNG file
 for col in iris.columns[:-1]:  # Skip the last column (class)
     plt.hist(iris[col], **hist_params)
+    plt.title('Iris Fisher Dataset')
     plt.xlabel(col)
     plt.ylabel('Frequency')
     plt.tight_layout()  # Add padding to the plot
