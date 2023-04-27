@@ -5,9 +5,10 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 """Read in the Iris data set"""
-iris = pd.read_csv("Iris.csv", names=["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm", "Species"])
+iris = pd.read_csv("Iris.csv", names=["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm", "Species"], header = 0)
 
 
 """Create a summary of the data set using the describe method and output the statistical data into a .txt file"""
@@ -27,6 +28,12 @@ for col in iris.columns[:-1]:  # Skip the last column (Species)
     plt.ylabel('Frequency')
     plt.tight_layout()  
     plt.savefig(f'{col}.png')
-    plt.clf()  
+    plt.clf()
+    
 
+sns.scatterplot(x='SepalLengthCm', y='SepalWidthCm', hue = 'Species' ,data=iris, x_bins = 15 , y_bins= 15)
+plt.title('Sepal Length v Sepal Width')
+plt.savefig(f'Sepal Length v Width.png')    
 
+sns.pairplot(iris, hue = 'Species')
+plt.savefig(f' Pairplot Sepal Length v Width.png')   
