@@ -6,6 +6,7 @@ The Iris Fisher data set is composed of 150 observations, with 50 samples from e
 Iris setosa, Iris virginica, and Iris versicolor. For each sample, four features were measured the length and width of both the sepals and petals in centimetres.
 
 Analysis of Visuals
+
 When plotting the sepal length versus the sepal width, we can gain insights into the relationship between these two features and how they may differ across the different species in the dataset.
 
 The scatter plot reveals that there is a positive correlation between sepal length and sepal width, meaning that as the length of the sepal increases, so does the width. However, the relationship is not perfectly linear, and there is some variability in the data.
