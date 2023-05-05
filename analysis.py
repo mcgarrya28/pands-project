@@ -20,7 +20,7 @@ with open('Iris Data Summary.txt', 'w') as f:
 
 hist_params = {'bins': 15, 'edgecolor': 'black', 'alpha': 0.5}
 
-# Generate a histogram of each variable and save it to a PNG file
+"""Generate a histogram of each variable and save it to a PNG file"""
 for col in iris.columns[:-1]:  # Skip the last column (Species)
     plt.hist(iris[col], **hist_params)
     plt.title('Iris Fisher Dataset')
@@ -33,7 +33,7 @@ for col in iris.columns[:-1]:  # Skip the last column (Species)
 
 sns.scatterplot(x='SepalLengthCm', y='SepalWidthCm', hue = 'Species' ,data=iris, x_bins = 15 , y_bins= 15)
 plt.title('Sepal Length v Sepal Width')
-plt.savefig(f'Sepal Length v Width.png')    
+plt.savefig(f'Sepal Length v Width Scatterplot.png')    
 
 sns.pairplot(iris, hue = 'Species')
-plt.savefig(f' Pairplot Sepal Length v Width.png')   
+plt.savefig(f' Pairplot Sepal Length v Width.png')
